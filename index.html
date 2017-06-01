@@ -1,7 +1,7 @@
 <!DOCTYPE html> 
 <html>  
     <head> 
-        <title>Example 12-1</title>  
+        <title>Captura</title>  
         <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />    <meta http-equiv="Content-type" content="text/html; charset=utf-8"> 
         <link rel="stylesheet" href="jquery.mobile1.0b3.min.css" />
         <script type="text/javascript" charset="utf-8" src="jquery1.6.4.min.js"></script>
@@ -15,7 +15,7 @@
             function onDeviceReady() { 
                 //Get a handle to the results area of the page 
                 //we'll need it later
-                res = document.getElementById("captureResults");      }
+                res = document.getElementById("captureResults");   }
       function doCapture() {  
           //Clear out any previous results 
           res.innerHTML = "Initiating capture...";  
@@ -27,7 +27,7 @@
           switch(captureType) { 
               case 0:  
                   //Capture Audio
-                  navigator.device.capture.captureAudio(onCaptureSuccess, onCaptureError,  {duration: capDur, limit: numItems});     
+                  navigator.device.capture.captureAudio(onCaptureSuccess, onCaptureError, {duration: capDur, limit: numItems});     
                   break;
               case 1:    
                   //Capture Image     
@@ -47,7 +47,7 @@
                 if(len > 0) { 
                     htmlStr = "<p>Results:</p><ol>"; 
                     for( i = 0, len; i < len; i += 1) { 
-                        //alert(fileList[i].fullPath); 
+                        alert(fileList[i].fullPath); 
                         htmlStr += '<li><a href="file:/' + fileList[i].fullPath + '">' + fileList[i].name +  '</a></li>';  } 
                     htmlStr += "</ol>";
                     //Set the results content
